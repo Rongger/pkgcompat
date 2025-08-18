@@ -7,6 +7,10 @@
   "bin": {
     "pkgcompat": "./index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rongger/pkgcompat"
+  },
   "scripts": {
     "prepare": "husky install"
   },

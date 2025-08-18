@@ -6,7 +6,7 @@ A CLI tool to find npm package versions compatible with the current Node.js vers
 
 ```bash
 # Install globally
-pnpm add -g pkgcompat
+npm install -g pkgcompat
 
 # Or run directly with npx
 npx pkgcompat <package-name>
