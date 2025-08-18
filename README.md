@@ -27,6 +27,9 @@ pkgcompat <package-name> --range ">=1.0.0 <2.0.0"
 # Check compatibility with a specific Node.js version
 pkgcompat <package-name> --node-version "18.12.0"
 pkgcompat <package-name> -n "18.12.0"
+
+# Limit the number of versions to show (default: all)
+pkgcompat <package-name> --limit 10
 ```
 
 ## Example

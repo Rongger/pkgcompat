@@ -10,6 +10,7 @@ program
   .argument('<package-name>', 'Name of the npm package to check')
   .option('-l, --latest', 'Only show the latest compatible version')
   .option('-r, --range <range>', 'Specify a version range to check (e.g., ">=1.0.0 <2.0.0")')
+  .option('--limit <number>', 'Limit the number of versions to show (default: all)', parseInt)
   .option(
     '-n, --node-version <version>',
     'Specify Node.js version to check against (e.g., "18.12.0")'
@@ -28,7 +29,8 @@ program
       const compatibleVersions = await findCompatibleVersions(
         packageName,
         nodeVersion,
-        options.range
+        options.range,
+        options.limit
       );
 
       if (compatibleVersions.length === 0) {

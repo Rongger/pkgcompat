@@ -1,6 +1,6 @@
 {
   "name": "pkgcompat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to find npm package versions compatible with the current Node.js version",
   "main": "index.js",
   "type": "module",
