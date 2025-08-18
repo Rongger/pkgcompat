@@ -1,0 +1,5 @@
+**/*.md
+**/*.svg
+pnpm-lock.yaml
+package.json
+dist
