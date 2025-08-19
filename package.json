@@ -1,9 +1,8 @@
 {
   "name": "pkgcompat",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI tool to find npm package versions compatible with the current Node.js version",
   "main": "index.js",
-  "type": "module",
   "bin": {
     "pkgcompat": "./index.js"
   },
@@ -23,8 +22,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "commander": "^14.0.0",
-    "package-json": "^10.0.1",
+    "commander": "^7.2.0",
+    "package-json": "^6.5.0",
     "semver": "^7.7.2"
   },
   "devDependencies": {
@@ -48,5 +47,8 @@
     "*.{less,css,md,json}": [
       "prettier --write"
     ]
+  },
+  "engines": {
+    "node": ">=10"
   }
 }

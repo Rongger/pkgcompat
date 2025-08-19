@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 
-import { program } from 'commander';
-import { findCompatibleVersions } from './lib/version-checker.js';
+const { program } = require('commander');
+const { findCompatibleVersions } = require('./lib/version-checker');
 
 program
   .name('pkgcompat')
   .description('CLI tool to find npm package versions compatible with a Node.js version')
   .version('1.0.0')
-  .argument('<package-name>', 'Name of the npm package to check')
+  .arguments('<package-name>')
+  .description('Name of the npm package to check')
   .option('-l, --latest', 'Only show the latest compatible version')
   .option('-r, --range <range>', 'Specify a version range to check (e.g., ">=1.0.0 <2.0.0")')
   .option('--limit <number>', 'Limit the number of versions to show (default: all)', parseInt)
@@ -50,4 +51,4 @@ program
     }
   });
 
-program.parse();
+program.parse(process.argv);
