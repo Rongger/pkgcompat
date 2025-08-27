@@ -2,11 +2,12 @@
 
 const { program } = require('commander');
 const { findCompatibleVersions } = require('./lib/version-checker');
+const { version } = require('./package.json');
 
 program
   .name('pkgcompat')
   .description('CLI tool to find npm package versions compatible with a Node.js version')
-  .version('1.0.0')
+  .version(version)
   .arguments('<package-name>')
   .description('Name of the npm package to check')
   .option('-l, --latest', 'Only show the latest compatible version')
